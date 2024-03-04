@@ -59,6 +59,7 @@ section{
 
 #home{
 height: 50vh;
+width: auto;
 color: white;
 background-image: url('assets/header-image.jpg');
 background-size: cover;
@@ -69,12 +70,16 @@ justify-content: center;
 gap: 16px;
 }
 
+.home__title{
+    font-size: 60px;
+}
+
 .home__paragraph{
     max-width: 400px;
 }
 
 .home__button{
-    padding: 8px 12ps;
+    padding: 8px 12px;
     font-size: 16px;
     background-color: white;
     border-radius: 9999px;
@@ -159,7 +164,7 @@ gap: 16px;
 
 .contact__title{
     font-size: 32px;
-    display: center;
+    text-align: center;
 }
 
 .contact__form{
@@ -207,6 +212,7 @@ gap: 16px;
 /* footer */
 
 .footer{
+    margin-top: 20px;
     height: 64px;
     background-color: red;
     padding: 0 16px;
@@ -225,11 +231,41 @@ gap: 16px;
 .about__title,
 .menu__title,
 .contact__title{
-    font-size: 24px
+    font-size: 24px;
 }
 
 .about__paragraph,
 .menu__paragraph{
     font-size: 12px;
 }
+}
+
+@media (max-width: 480px){
+    .nav__link:not(:last-child){
+    display: none;
+    }
+
+    #about,
+    #menu{
+        align-items: center;
+    }
+
+    #about{
+        flex-direction: column;
+    }
+
+    #menu{
+        flex-direction: column-reverse;
+    }
+
+    .about__wrapper,
+    .menu__wrapper {
+        align-items: center;
+        text-align: center;
+    }
+
+    .about__image,
+    .menu__image{
+        width: 100%;
+    }
 }
